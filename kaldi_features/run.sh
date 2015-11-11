@@ -25,7 +25,7 @@ rm $mfccdir/raw_mfcc_train.*  # clean raw files, won't need these
 cat $mfccdir/mfcc_cmnv_dd_train.*.scp > data/train/mfcc_cmvn_dd.scp
 mfcc_scp=data/train/mfcc_cmvn_dd.scp
 
-# Prepare clusters_gt set (used in Kamper et al., ICASSP 2015)
+# Prepare clusters_gt set, used in [Kamper et al., ICASSP 2015]
 x=clusters_gt
 mkdir -p data/${x}
 local/make_clusters_segments.py ../data/wordpairs_samtrain.list data/${x}/segments

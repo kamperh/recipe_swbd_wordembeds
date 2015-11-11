@@ -6,7 +6,7 @@ Overview
 --------
 
 This is a recipe for extracting acoustic word embeddings for a subset of the
-Switcboard corpus. The models are described in detail in:
+Switchboard corpus. The models are described in detail in:
 
 - H. Kamper, W. Wang, and K. Livescu, "Deep convolutional acoustic word
   embeddings using word-pair side information," arXiv preprint
@@ -30,6 +30,15 @@ Steps
 3.  Run the steps in [kaldi_features/run.sh](kaldi_features/run.sh).
 
 4.  Run the steps in [cnn_wordembeds/readme.md](cnn_wordembeds/readme.md).
+
+5.  If you run the steps correctly above, then if you execute the following:
+
+        cd cnn_wordembeds/
+        ./apply_layers.py models/siamese_triplets_cnn.1/ test
+        ./eval_samediff.py \
+            models/siamese_triplets_cnn.1/swbd.test.layers_output.npz
+
+    Then you should get an average precision (AP) score of ... .
 
 
 Dependencies
