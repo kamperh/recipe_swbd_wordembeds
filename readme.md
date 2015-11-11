@@ -6,7 +6,8 @@ Overview
 --------
 
 This is a recipe for extracting acoustic word embeddings for a subset of the
-Switchboard corpus. The models are described in detail in:
+Switchboard corpus. The models are described in detail in [Kamper et al.,
+2015](http://arxiv.org/abs/1510.01032):
 
 - H. Kamper, W. Wang, and K. Livescu, "Deep convolutional acoustic word
   embeddings using word-pair side information," arXiv preprint
