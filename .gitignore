@@ -1,0 +1,12 @@
+*
+!*/
+!.*
+!*.py
+!*.pyx
+!*.md
+!*.sh
+!*.pl
+!data/*.list
+!.gitignore
+!kaldi_features/steps
+!kaldi_features/utils
