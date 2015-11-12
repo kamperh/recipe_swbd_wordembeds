@@ -21,7 +21,7 @@ import sys
 import theano
 import theano.tensor as T
 
-sys.path.append(path.join("..", "couscous"))
+sys.path.append(path.join("..", "..", "src", "couscous"))
 
 from couscous import logistic, mlp, theano_utils, training
 import apply_layers

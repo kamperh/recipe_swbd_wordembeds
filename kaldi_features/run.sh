@@ -18,8 +18,9 @@ local/swbd1_data_prep.sh /share/data/speech/Datasets/switchboard/
 # Get MFCC features
 mfccdir=mfcc
 x=train
-steps/make_mfcc.sh --nj 50 --cmd "$train_cmd" data/$x exp/make_mfcc/$x $mfccdir  # Here
-steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir 
+steps/make_mfcc.sh --nj 50 --cmd "$train_cmd" data/$x exp/make_mfcc/$x $mfccdir
+steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir
+utils/fix_data_dir.sh data/$x
 local/cmvn_dd.sh --nj 50 --cmd "$train_cmd" data/train exp/make_cmvn_dd/$x $mfccdir
 rm $mfccdir/raw_mfcc_train.*  # clean raw files, won't need these
 cat $mfccdir/mfcc_cmnv_dd_train.*.scp > data/train/mfcc_cmvn_dd.scp
@@ -40,6 +41,5 @@ extract-rows data/${x}/segments "scp:$mfcc_scp" "ark,scp:data/${x}/${x}.mfcc.ark
 # Prepare samediff_test
 x=samediff_test
 mkdir -p data/${x}
-ln -s $swbd_samediff_flist_dir/words_gamtrain_lc.lst data/local/samediff/words_gamtrain_lc.lst
 local/make_test_segments.py ../data/words_gamtrain_lc.list data/${x}/segments
 extract-rows data/${x}/segments "scp:$mfcc_scp" "ark,scp:data/${x}/${x}.mfcc.ark,data/${x}/${x}.mfcc.scp"

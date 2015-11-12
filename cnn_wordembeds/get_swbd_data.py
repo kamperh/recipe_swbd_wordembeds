@@ -17,12 +17,12 @@ import os
 import PIL.Image as Image
 import sys
 
-sys.path.append(path.join("..", "couscous"))
+sys.path.append(path.join("..", "..", "src", "couscous"))
 
 from couscous import plotting
 from data_io import read_kaldi_ark_from_scp, smart_open
 
-data_base_dir = "/share/data/speech-multiview/kamperh/kaldi/swbd/s5c.herman"
+data_base_dir = "../kaldi_features"
 n_padded = 200  # pad to have this many feature vectors in every instance
 
 

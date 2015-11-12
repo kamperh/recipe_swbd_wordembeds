@@ -21,7 +21,7 @@ import sys
 import theano
 import theano.tensor as T
 
-sys.path.append(path.join("..", "couscous"))
+sys.path.append(path.join("..", "..", "src", "couscous"))
 
 from couscous import cnn, mlp, theano_utils, training
 import apply_layers
@@ -63,7 +63,7 @@ default_options_dict = {
     "hidden_layer_specs": [
         {"units": 1024, "activation": "relu"},
         # {"units": 1024, "activation": "relu"},
-        {"units": 50, "activation": "linear"},
+        # {"units": 50, "activation": "linear"},
         ],
     "i_layer_eval": -1,
     }

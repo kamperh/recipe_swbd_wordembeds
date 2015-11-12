@@ -26,6 +26,6 @@
 #export mkgraph_cmd=run.pl
 
 # d) TTIC cluster options
-export train_cmd="queue.pl -l medium -r y"
-export decode_cmd="queue.pl -l medium -r y"
+export train_cmd="queue.pl -V -l medium -r y"
+export decode_cmd="queue.pl -V -l medium -r y"
 export cuda_cmd="run.pl"

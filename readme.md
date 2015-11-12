@@ -37,9 +37,15 @@ Steps
         cd cnn_wordembeds/
         ./apply_layers.py models/siamese_triplets_cnn.1/ test
         ./eval_samediff.py \
-            models/siamese_triplets_cnn.1/swbd.test.layers_output.npz
+            models/siamese_triplets_cnn.1/swbd.test.layer_-1.npz
 
-    Then you should get an average precision (AP) score of ... .
+    Then the evaluation should show the following output:
+
+        Average precision: 0.537404372048
+        Precision-recall breakeven: 0.542724052097
+
+    The average precision (AP) of 0.537 is used for the number reported in
+    Table 1, row 9 of [Kamper et al., 2015](http://arxiv.org/abs/1510.01032).
 
 
 Dependencies
