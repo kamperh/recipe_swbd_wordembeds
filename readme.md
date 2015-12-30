@@ -10,8 +10,7 @@ Switchboard corpus. The models are described in detail in [Kamper et al.,
 2015](http://arxiv.org/abs/1510.01032):
 
 - H. Kamper, W. Wang, and K. Livescu, "Deep convolutional acoustic word
-  embeddings using word-pair side information," arXiv preprint
-  arXiv:1510.01032, 2015.
+  embeddings using word-pair side information," Proc. ICASSP, 2016.
 
 Please cite this paper if you use this code. All the neural networks are
 implemented in the package [couscous](https://github.com/kamperh/couscous).
